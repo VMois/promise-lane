@@ -55,7 +55,7 @@ export default class PromiseLane {
             return;
         }
         
-        // Calls check funct
+        // Calls _run function again, but also allows other code in event loop to run
         setTimeout(this.boundRun, 0);
     }
 }
